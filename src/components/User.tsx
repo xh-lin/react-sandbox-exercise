@@ -8,10 +8,10 @@ interface UserProps {
 function User({ userData }: UserProps) {
   return (
     <>
-      <img src={userData.thumbnail}></img>
+      <img src={userData.picture.thumbnail}></img>
       <ul>
-        <li>{userData.firstname}</li>
-        <li>{userData.lastname}</li>
+        <li>{userData.name.first}</li>
+        <li>{userData.name.last}</li>
         <li>{userData.email}</li>
       </ul>
     </>
