@@ -8,11 +8,11 @@ interface UsersProps {
 
 function Users({ userDataList }: UsersProps) {
   return (
-    <>
+    <div className="container d-flex flex-wrap align-items-top">
       {userDataList.map((userData) => (
         <User key={`${userData.email}`} userData={userData} />
       ))}
-    </>
+    </div>
   );
 }
 
