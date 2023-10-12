@@ -1,10 +1,11 @@
 import "./styles.css";
+import Users from "./components/Users";
+import { mockUserDataList } from "./apis/randomuserApi";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Users userDataList={mockUserDataList}></Users>
     </div>
   );
 }
