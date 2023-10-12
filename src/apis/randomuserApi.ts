@@ -14,9 +14,12 @@ export type UserData = {
 }
 
 export const getRandomuser = async (n: number): Promise<UserData[]> => {
-  const res = await axios.get(RANDOMUSER_API_URL, { params: { results: n } });
-  const users: UserData[] = res.data.results;
-  return users;
+  return axios.get(RANDOMUSER_API_URL, { params: { results: n } }).then((res) => {
+    return res.data.results;
+  }).catch((err) => {
+    console.error(err);
+    return [];
+  });
 };
 
 export const mockUserDataList = [
