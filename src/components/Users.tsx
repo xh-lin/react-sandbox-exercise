@@ -3,7 +3,7 @@ import User from "./User";
 import { UserData } from "../apis/randomuserApi"
 
 interface UsersProps {
-    userDataList: UserData[]
+    userDataList: UserData[];
 }
 
 function Users({ userDataList }: UsersProps) {

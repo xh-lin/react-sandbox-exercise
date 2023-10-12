@@ -7,8 +7,8 @@ const USER_COUNT = 10;
 export default function App() {
   const [userDataList, setUserDataList] = useState<UserData[]>([]);
   useEffect(() => {
-    getRandomuser(USER_COUNT).then((res) => {
-      setUserDataList(res);
+    getRandomuser(USER_COUNT).then((users) => {
+      setUserDataList(users);
     });
   }, []);
 
